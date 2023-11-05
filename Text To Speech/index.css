@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(45deg, #ff5d0c, #fdd453);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+textarea {
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.row button {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-weight: 700;
+    border: none;
+    outline: none;
+}
+
+.row select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
