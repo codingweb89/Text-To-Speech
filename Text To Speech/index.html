@@ -7,11 +7,10 @@
     <title>Text To Speech</title>
 </head>
 <body>
-    
 
 <div class="cover">
-    <textarea></textarea>
-    <div class="row">
+    <textarea placeholder="Enter anything here!"></textarea>
+    <div class="col">
         <select></select>
         <button>Listen</button>
     </div>
@@ -42,6 +41,10 @@ voiceSelect.addEventListener("change", e => {
 
 document.querySelector("button").addEventListener("click", e => {
     speech.text = document.querySelector("textarea").value;
+
+    if (document.querySelector("textarea").value == "") {
+        speech.text = "Please insert some sentences";
+    }
     window.speechSynthesis.speak(speech)
 })
 

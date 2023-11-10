@@ -1,10 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    background: linear-gradient(45deg, #ff5d0c, #fdd453);
+    background: #222;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,16 +13,48 @@ body {
 }
 
 textarea {
-    width: 400px;
-    height: 200px;
+    width: 600px;
+    height: 300px;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    font: 1.1em sans-serif;
+    line-height: 1.7;
 }
 
-.row {
+textarea::placeholder {
+    color: #222;
+}
+
+.col {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     gap: 20px;
+    margin-top: 10px;
+}
+
+.col div {
+    position: relative;
+    flex: 1;
+}
+
+.col select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    appearance: none;
+}
+
+.col img {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-59%) rotate(180deg);
+    width: 15px;
 }
 
 .row button {
@@ -30,12 +63,8 @@ textarea {
     font-weight: 700;
     border: none;
     outline: none;
-}
-
-.row select {
-    flex: 1;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
+    background: rgb(2, 2, 252);
+    color: #fff;
+    border-radius: 3px;
+    font: 1em sans-serif;
 }
